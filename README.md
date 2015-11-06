@@ -4,7 +4,7 @@ map that shows the location and information of a broad selection of MUN conferen
 <html>
   <head>
     <style>
-      #map {
+      # map {
         width: 500px;
         height: 400px;
 	background-colour: #CCC
