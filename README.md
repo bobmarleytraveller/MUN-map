@@ -20,7 +20,8 @@ map that shows the location and information of a broad selection of MUN conferen
       				mapTypeId: google.maps.MapTypeId.ROADMAP
 			}
     			var map = new google.maps.Map(mapCanvas, mapOptions);
-}
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
 	</script>
   </head>
   <body>
