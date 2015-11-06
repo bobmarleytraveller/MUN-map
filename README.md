@@ -10,12 +10,16 @@ map that shows the location and information of a broad selection of MUN conferen
 	background-colour: #CCC
       }
     </style>
-	<script src="https://maps.googleapis.com/maps/api/js">
-	</script>
+	<script src="https://maps.googleapis.com/maps/api/js"> </script>
 	<script>
   		function initialize() {
 			var mapCanvas = document.getElementById('map');
-    			var map = new google.maps.Map(mapCanvas);
+			var mapOptions = {
+				center: new google.maps.LatLng(44.5403, -78.5463),
+				zoom: 8,
+      				mapTypeId: google.maps.MapTypeId.ROADMAP
+			}
+    			var map = new google.maps.Map(mapCanvas, mapOptions);
 }
 	</script>
   </head>
