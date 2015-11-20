@@ -17,7 +17,18 @@
           mapTypeId: google.maps.MapTypeId.ROADMAP
         }
         var map = new google.maps.Map(mapCanvas, mapOptions)
+        
+        //requests data from U.S. earthquake site, not part of the project
+        var script = document.createElement('script');
+        
+        script.src = 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp';
+        document.getElementsByTagName('head')[0].appendChild(script);
       }
+      
+      function eqfeed_callback(results) {
+        map.data.addGeoJson(results);
+      }
+
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
   </head>
